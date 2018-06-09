@@ -8,7 +8,7 @@ Description: This is a simple Rails starter application for prototyping
 
 * Change the name of the application [follow these instructions](https://stackoverflow.com/questions/42326432/how-to-rename-a-rails-5-application)
 
-
+* Delete the current git connect with `rm -rf .git/`
 
 ## Version
 
