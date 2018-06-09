@@ -4,7 +4,7 @@
     <title>RailsStarter</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 		
 		<%= javascript_pack_tag 'application' %>
@@ -18,8 +18,8 @@
           Company
         </div>
         <div class="nav-links">
-          <%= link_to "link1", root_url %>
-          <%= link_to "link2", root_url %>
+          <%= link_to "link1", root_path %>
+          <%= link_to "link2", help_path %>
           <%= link_to "link3", about_path %>
           <%= link_to "Dropdown", help_path, class:"cta" %>
         </div>

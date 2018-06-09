@@ -63,7 +63,7 @@
 
 // Navigation
 nav {
-	@apply .bg-black .py-3 .flex .fixed .w-full;
+	@apply .bg-black .py-3 .flex .fixed .w-full .h-16;
 	
 	.nav-container {
 		@apply .flex .py-2;
@@ -90,6 +90,11 @@ nav {
 			}	
 		}
 	}
+}
+
+// Hero
+.hero {
+	@apply .pt-16;
 }
 
 // Debug Dump
