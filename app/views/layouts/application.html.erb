@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsStarter</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
-
+    <%= tag :meta, "http-equiv":"Content-Type", content:"text/html; charset=utf-8" %>
+    <%= tag :meta, name:"viewport", content:"width=device-width, initial-scale=1" %>
+    <!-- Utility  -->
+    <%= tag :meta, name:"action", content: params[:action] %>
+    <%= tag :meta, name:"controller", content: params[:controller] %> 
+    <!-- SEO -->
+    <%= tag :meta, name:"description", content: yield(:desc) %> 
     <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-		
-		<%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>    
+    <%= javascript_pack_tag 'application' %>
     <%= stylesheet_pack_tag 'application' %>
   </head>
 
