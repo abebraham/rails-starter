@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require clipboard
+//= require jquery.slick
 //= require turbolinks
 //= require_tree .
