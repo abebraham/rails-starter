@@ -9,4 +9,8 @@ module ApplicationHelper
 			"#{page_title} | #{base_title}"
 		end
 	end
+	# Creates simple meta tags
+	def meta_tag(name, content)
+		tag(:meta, name: name, content: content)
+	end
 end

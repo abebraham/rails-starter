@@ -6,30 +6,20 @@
     <%= tag :meta, "http-equiv":"Content-Type", content:"text/html; charset=utf-8" %>
     <%= tag :meta, name:"viewport", content:"width=device-width, initial-scale=1" %>
     <!-- Utility  -->
-    <%= tag :meta, name:"action", content: params[:action] %>
-    <%= tag :meta, name:"controller", content: params[:controller] %> 
+    <%= meta_tag "action", params[:action] %>
+    <%= meta_tag "controller", params[:controller] %>
     <!-- SEO -->
-    <%= tag :meta, name:"description", content: yield(:desc) %> 
-    <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= meta_tag "description", yield(:desc) %>
+    <!-- Default -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>    
     <%= javascript_pack_tag 'application' %>
     <%= stylesheet_pack_tag 'application' %>
   </head>
 
   <body>
-    <nav>
-      <div class="nav-container container">
-        <div class="nav-brand">
-          Company
-        </div>
-        <div class="nav-links">
-          <%= link_to "link1", root_path %>
-          <%= link_to "link2", help_path %>
-          <%= link_to "link3", about_path %>
-          <%= link_to "Dropdown", help_path, class:"cta" %>
-        </div>
-      </div>
-    </nav>
+    <%= render 'shared/devise-notify' %>
+    <%= render 'shared/nav-main' %>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>
   </body>

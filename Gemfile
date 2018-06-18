@@ -21,7 +21,7 @@ gem 'clipboard-rails'
 # Carousel
 gem "jquery-slick-rails"
 # user login
-# gem 'devise'
+gem 'devise'
 # Stripe
 # gem 'stripe'
 
