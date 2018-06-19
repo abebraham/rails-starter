@@ -1,6 +1,17 @@
 # README
 
-Description: This is a simple Rails starter application for prototyping
+Description: This is a simple Rails starter application for prototyping with the following tools
+
+* Database: postgreSQL
+* Payments: [Stripe](https://stripe.com/docs/checkout/rails)
+* Authentication: [Devise](http://devise.plataformatec.com.br/)
+* Frontend: [Tailwinds CSS](https://tailwindcss.com/)
+    * Icons: [Fontawesome](https://fontawesome.com/)
+    * Carousel: [Slick.JS](http://kenwheeler.github.io/slick/)
+    * Clipboard: [Clipboard.JS](https://clipboardjs.com/)
+    * Checkbox/Radio: [Pretty Checkbox](https://lokesh-coder.github.io/pretty-checkbox/) 
+* Analytics: 
+*  
 
 ## Getting Started
 
@@ -23,26 +34,26 @@ Description: This is a simple Rails starter application for prototyping
 * run `eb create`
 
 * Run in root directory `mkdir .ebextensions`
+    - Create `.ebextensions/db.config` with the following yaml content:
+    ```bash
+    packages:
+      yum:
+        postgresql93-devel: []
 
-* Create a `db.config` with the following yaml content:
-```bash
-packages:
-  yum:
-    postgresql93-devel: []
-
-```
-* Create a yarn.config with the following content:
-```bash
-commands:
-  01_install_yarn:
-    command: "sudo wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo && curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash - && sudo yum install yarn -y"
-  02_download_nodejs:
-    command: curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
-  03_install_nodejs:
-    command: yum -y install nodejs
-```
+    ```
+    - Create `.ebextensions/yarn.config` with the following content:
+    ```bash
+    commands:
+      01_install_yarn:
+        command: "sudo wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo && curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash - && sudo yum install yarn -y"
+      02_download_nodejs:
+        command: curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+      03_install_nodejs:
+        command: yum -y install nodejs
+    ```
 
 * Go into AWS Console and create postgreSQL db within Elastic Beanstalk. Do _not_ use username: Admin!
+    - Go into your environment > configurations > database 
 
 * run `eb setenv SECRET_KEY_BASE=$(rails secret)`
 
@@ -56,7 +67,7 @@ commands:
 
 * Run `eb printenv` to view environment variables
 
-* Run `eb setenv CONTANT="String or boolean"` to set environment variables
+* Run `eb setenv CONSTANT="String or boolean"` to set environment variables
 
 ## Devise
 
