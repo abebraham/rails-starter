@@ -61,6 +61,35 @@
  * @import "utilities/skew-transforms";
  */
 
+// Forms
+.form-section {
+	@apply .h-screen .flex .items-center .justify-center .pt-16;
+
+	.form-container {
+		@apply .max-w-sm .bg-blue .flex .items-center .flex-col .w-1/2 .shadow-lg .rounded;
+
+		form {
+			@apply .w-full .rounded-t .bg-grey-light .px-3 .py-4 .mb-3;
+
+			.form-title, .form-group { @apply .mb-2 .w-full .text-center;}
+
+			.form-text {}
+
+			.form-password {}
+
+			.form-submit {
+				@apply .px-3 .py-2 .bg-blue .text-white .cursor-pointer .rounded;
+
+				&:hover { @apply .bg-blue-dark;}
+			}
+		}
+
+		a { 
+			@apply .no-underline .text-white
+		}
+	}
+}
+
 // Navigation
 nav {
 	@apply .bg-black .py-3 .flex .fixed .w-full .h-16;
