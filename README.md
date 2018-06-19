@@ -22,8 +22,6 @@ Description: This is a simple Rails starter application for prototyping
 
 * run `eb create`
 
-### Create .ebextensions
-
 * Run in root directory `mkdir .ebextensions`
 
 * Create a `db.config` with the following yaml content:
@@ -33,7 +31,6 @@ packages:
     postgresql93-devel: []
 
 ```
-
 * Create a yarn.config with the following content:
 ```bash
 commands:
@@ -44,6 +41,20 @@ commands:
   03_install_nodejs:
     command: yum -y install nodejs
 ```
+
+* run `eb setenv SECRET_KEY_BASE=$(rails secret)`
+
+* run `RAILS_ENV=production bundle exec rake assets:precompile`
+
+* Make sure to run `git add . && git commit -m "getting ready for aws eb"`
+
+* run `eb deploy`
+
+### Useful EB commands
+
+* Run `eb printenv` to view environment variables
+
+* Run `eb setenv CONTANT="String or boolean"` to set environment variables
 
 ## Devise
 
