@@ -16,6 +16,35 @@ Description: This is a simple Rails starter application for prototyping
 
 * Change the name of the application [follow these instructions](https://stackoverflow.com/questions/42326432/how-to-rename-a-rails-5-application)
 
+## Devise
+
+### Getting Started
+
+* Run `Bundle update && bundle install`
+
+* Run `rails generate devise:install`
+
+* To be able to customize devise views run the following: `rails g devise:views`
+
+* Add the following to `config/environments/development.rb`
+	- `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
+
+* Run `rails generate devise MODEL` (usually using User)
+
+* Run `rails generate controller Users`
+
+* Run `rails db:migrate`
+
+### Working with Devise
+
+* Add new attribute to (User) model
+	* Run `rails g migration addNameToUsers name:string`
+
+* Edit registration (sign up) via parameters
+	* `app/controllers/registrations_controller.rb`
+
+* Edit devise views `app/views/devise/*`
+
 
 ## Version
 
