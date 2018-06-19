@@ -16,6 +16,35 @@ Description: This is a simple Rails starter application for prototyping
 
 * Change the name of the application [follow these instructions](https://stackoverflow.com/questions/42326432/how-to-rename-a-rails-5-application)
 
+## AWS Elastic Beanstalk
+
+* run `eb init`
+
+* run `eb create`
+
+### Create .ebextensions
+
+* Run in root directory `mkdir .ebextensions`
+
+* Create a `db.config` with the following yaml content:
+```bash
+packages:
+  yum:
+    postgresql93-devel: []
+
+```
+
+* Create a yarn.config with the following content:
+```bash
+commands:
+  01_install_yarn:
+    command: "sudo wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo && curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash - && sudo yum install yarn -y"
+  02_download_nodejs:
+    command: curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+  03_install_nodejs:
+    command: yum -y install nodejs
+```
+
 ## Devise
 
 ### Getting Started
