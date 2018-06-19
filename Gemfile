@@ -5,7 +5,6 @@ gem 'rails',                   '5.0.5'
 gem 'bcrypt',                  '3.1.11'
 gem 'faker',                   '1.7.3'
 gem 'will_paginate',           '3.1.6'
-gem 'puma',                    '3.9.1'
 gem 'sass-rails',              '5.0.6'
 gem 'uglifier',                '3.2.0'
 gem 'coffee-rails',            '4.2.2'
@@ -46,6 +45,7 @@ group :test do
 end
 
 group :production do
+gem 'puma', '3.9.1'
   gem 'pg', '0.20.0'
 end
 
