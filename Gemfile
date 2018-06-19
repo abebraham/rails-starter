@@ -45,7 +45,7 @@ group :test do
 end
 
 group :production do
-gem 'puma', '3.9.1'
+  gem 'puma', '3.9.1'
   gem 'pg', '0.20.0'
 end
 
