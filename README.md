@@ -42,6 +42,8 @@ commands:
     command: yum -y install nodejs
 ```
 
+* Go into AWS Console and create postgreSQL db within Elastic Beanstalk. Do _not_ use username: Admin!
+
 * run `eb setenv SECRET_KEY_BASE=$(rails secret)`
 
 * run `RAILS_ENV=production bundle exec rake assets:precompile`
