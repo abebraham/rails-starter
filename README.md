@@ -32,6 +32,7 @@ Description: This is a simple Rails starter application for prototyping with the
 * run `eb init`
 
 * run `eb create`
+    * Look into [`eb create db...`](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-create.html)
 
 * Run in root directory `mkdir .ebextensions`
     - Create `.ebextensions/db.config` with the following yaml content:
