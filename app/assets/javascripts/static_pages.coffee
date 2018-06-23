@@ -6,9 +6,9 @@ ready = ->
 	if $('body').attr('data-loaded') == 'T'
     return
   # My code
-  meta_tag = document.querySelector("meta[name='action']").content
-  if meta_tag == "welcome"
-    # initSlick()
+  # meta_tag = document.querySelector("meta[name='action']").content
+  # if meta_tag == "welcome"
+  	# initSlick()
   # End of my code
   $('body').attr('data-loaded','T')
 
