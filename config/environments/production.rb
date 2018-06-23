@@ -1,6 +1,17 @@
 Rails.application.configure do
+  # Email settings 
+  config.action_mailer.perform_deliveries = true
+	config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+	  :address => "email-smtp.us-west-2.amazonaws.com",
+	  :port => 587,
+	  :user_name => ENV["SES_SMTP_USERNAME"], #Your SMTP user
+	  :password => ENV["SES_SMTP_PASSWORD"], #Your SMTP password
+	  :authentication => :login,
+	  :enable_starttls_auto => true
+	}
   # Verifies that versions and hashed value of the package contents in the project's package.json
-config.webpacker.check_yarn_integrity = false
+	config.webpacker.check_yarn_integrity = false
 
   # Settings specified here will take precedence over those in config/application.rb.
 
