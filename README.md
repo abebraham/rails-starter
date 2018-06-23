@@ -110,6 +110,10 @@ Description: This is a simple Rails starter application for prototyping with the
 	* `eb setenv SES_SMTP_USERNAME=<username>`
 	* `eb setenv SES_SMTP_PASSWORD=<password>`
 
+* Change `# EMAIL CONFIGURATIONS` found in `production.rb` and `development.rb`
+	* Note for `development.rb` you may need to create a Google password app
+	* For `production.rb` use the specific Elastic Beanstalk Instance information
+
 * `git add . && git commit -m ""` then `eb deply`
 
 ## Version
