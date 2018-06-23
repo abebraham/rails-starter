@@ -99,6 +99,15 @@ Description: This is a simple Rails starter application for prototyping with the
 
 * Edit devise views `app/views/devise/*`
 
+## AWS SES
+
+### Credentials
+* Adding Email Address following this [guide](https://www.sitepoint.com/deliver-the-mail-with-amazon-ses-and-rails/)
+
+* Next create your SMTP Credentials
+
+* Added SMTP Username and SMTP Password to environemnt
+	* 
 
 ## Version
 

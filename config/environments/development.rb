@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Verifies that versions and hashed value of the package contents in the project's package.json
-config.webpacker.check_yarn_integrity = true
+	config.webpacker.check_yarn_integrity = true
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -28,14 +28,31 @@ config.webpacker.check_yarn_integrity = true
 
     config.cache_store = :null_store
   end
-
+	
+	# EMAIL CONFIGURATIONS
+	# Perform Emails
+	config.action_mailer.perform_deliveries = true   
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  # May be needed?
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings
+	config.action_mailer.smtp_settings = {
+	  :address => "email-smtp.us-west-2.amazonaws.com",
+	  :port => 587,
+	  :user_name => ENV["SES_SMTP_USERNAME"], 
+	  :password => ENV["SES_SMTP_PASSWORD"], 
+	  :authentication => :login,
+	  :enable_starttls_auto => true
+	}
+
 
   config.action_mailer.perform_caching = false
 
   # Devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
