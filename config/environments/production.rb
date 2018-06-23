@@ -10,7 +10,7 @@ Rails.application.configure do
 	  :address => "email-smtp.us-west-2.amazonaws.com",
 	  :port => 587,
 	  :user_name => ENV["SES_SMTP_USERNAME"], # Your SMTP user
-	  :password => ENV["SES_SMTP_PASSWORD"], #Your SMTP password
+	  :password => ENV["SES_SMTP_PASSWORD"], # Your SMTP password
 	  :authentication => :login,
 	  :enable_starttls_auto => true
 	}

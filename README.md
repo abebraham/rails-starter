@@ -2,6 +2,7 @@
 
 Description: This is a simple Rails starter application for prototyping with the following tools
 
+* Server: AWS Elastic Beanstalk
 * Database: postgreSQL
 * Payments: [Stripe](https://stripe.com/docs/checkout/rails)
 * Authentication: [Devise](http://devise.plataformatec.com.br/)
@@ -11,7 +12,7 @@ Description: This is a simple Rails starter application for prototyping with the
     * Clipboard: [Clipboard.JS](https://clipboardjs.com/)
     * Checkbox/Radio: [Pretty Checkbox](https://lokesh-coder.github.io/pretty-checkbox/) 
 * Analytics: 
-*  
+* Email: AWS SES
 
 ## Getting Started
 
@@ -99,7 +100,7 @@ Description: This is a simple Rails starter application for prototyping with the
 
 * Edit devise views `app/views/devise/*`
 
-## AWS SES
+## Email | AWS SES
 
 ### Credentials
 * Adding Email Address following this [guide](https://www.sitepoint.com/deliver-the-mail-with-amazon-ses-and-rails/)
@@ -120,3 +121,7 @@ Description: This is a simple Rails starter application for prototyping with the
 * When ready you will have to get out of the AWS SES Sandbox
 
 * Run `git add .` then `git commit -m ""` then `eb deploy`
+
+### Edit Email Views
+* For most Devise related Email Views edit in `appview/devise/mailer*`
+* For successful Registration email view `registrations_controller.rb`

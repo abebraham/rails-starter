@@ -36,16 +36,7 @@
  * @import "components/forms";
  */
 
-
-@keyframes animate-opacity-on-off{
-	0% { opacity: 1;}
-	100% { opacity: 0;}
-}
-
-@keyframes animate-opacity-off-on{
-	0% { opacity: 0;}
-	100% { opacity: 1;}
-}
+// Keyframes
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
@@ -73,9 +64,22 @@
  */
 
 // Devise Nav Notification
-.devise-notice {
-	@apply .border-l-8 .text-white .h-12 .flex .items-center .justify-center;
-	animation: animate-opacity-on-off 2s forwards 2s ease-out;
+.devise-notice-wrapper {
+	@apply .absolute .w-full .pin-t .z-10;
+	animation: animate-z-index 2s forwards 2s ease-out;
+
+	.devise-notice {
+		@apply .border-l-8 .text-white .h-12 .flex .items-center .justify-center;
+		animation: animate-opacity-notice 2s forwards 2s ease-out;
+	}
+}
+@keyframes animate-z-index {
+	0% { z-index: 10; }
+	100% { z-index: -1; }
+}
+@keyframes animate-opacity-notice{
+	0% { opacity: 1; }
+	100% { opacity: 0; }
 }
 
 // Forms

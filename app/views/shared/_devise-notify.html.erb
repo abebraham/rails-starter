@@ -2,7 +2,7 @@
 <% if notice or alert %>
 <% color = alert ? "alert bg-red border-red-light" : "notice bg-blue border-blue-light" %>
 <div class="relative container">
-  <div class="absolute w-full pin-t z-50">
+  <div class="devise-notice-wrapper">
     <p class="devise-notice <%= color %>">
     	<%= notice %><%= alert %>
     </p>
