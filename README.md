@@ -107,7 +107,10 @@ Description: This is a simple Rails starter application for prototyping with the
 * Next create your SMTP Credentials
 
 * Added SMTP Username and SMTP Password to environemnt
-	* 
+	* `eb setenv SES_SMTP_USERNAME=<username>`
+	* `eb setenv SES_SMTP_PASSWORD=<password>`
+
+* `git add . && git commit -m ""` then `eb deply`
 
 ## Version
 
