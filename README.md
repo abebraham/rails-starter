@@ -117,24 +117,6 @@ Description: This is a simple Rails starter application for prototyping with the
 * Change the following from `devise.rb`
 	* `config.mailer_sender = <email that is accepted by AWS SES>` 
 
+* When ready you will have to get out of the AWS SES Sandbox
+
 * Run `git add .` then `git commit -m ""` then `eb deploy`
-
-## Version
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

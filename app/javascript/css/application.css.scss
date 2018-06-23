@@ -36,6 +36,17 @@
  * @import "components/forms";
  */
 
+
+@keyframes animate-opacity-on-off{
+	0% { opacity: 1;}
+	100% { opacity: 0;}
+}
+
+@keyframes animate-opacity-off-on{
+	0% { opacity: 0;}
+	100% { opacity: 1;}
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
@@ -60,6 +71,12 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+// Devise Nav Notification
+.devise-notice {
+	@apply .border-l-8 .text-white .h-12 .flex .items-center .justify-center;
+	animation: animate-opacity-on-off 2s forwards 2s ease-out;
+}
 
 // Forms
 .form-section {
