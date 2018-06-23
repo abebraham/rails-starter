@@ -114,7 +114,10 @@ Description: This is a simple Rails starter application for prototyping with the
 	* Note for `development.rb` you may need to create a Google password app
 	* For `production.rb` use the specific Elastic Beanstalk Instance information
 
-* `git add . && git commit -m ""` then `eb deply`
+* Change the following from `devise.rb`
+	* `config.mailer_sender = <email that is accepted by AWS SES>` 
+
+* Run `git add .` then `git commit -m ""` then `eb deploy`
 
 ## Version
 
