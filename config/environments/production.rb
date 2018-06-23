@@ -2,6 +2,9 @@ Rails.application.configure do
   # Email settings 
   config.action_mailer.perform_deliveries = true
 	config.action_mailer.raise_delivery_errors = true
+  host = 'rails-starter-staging.us-west-2.elasticbeanstalk.com'
+  config.action_mailer.default_url_options = { host: host }
+
   config.action_mailer.smtp_settings = {
 	  :address => "email-smtp.us-west-2.amazonaws.com",
 	  :port => 587,
