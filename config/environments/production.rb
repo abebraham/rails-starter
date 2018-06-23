@@ -1,14 +1,15 @@
 Rails.application.configure do
 	# EMAIL CONFIGURATIONS
+	config.x.mail_from = %(Your site name <no-reply@rails-starter-staging.us-west-2.elasticbeanstalk.com>)
   config.action_mailer.perform_deliveries = true
 	config.action_mailer.raise_delivery_errors = true
   host = 'rails-starter-staging.us-west-2.elasticbeanstalk.com'
   config.action_mailer.default_url_options = { host: host }
 
   config.action_mailer.smtp_settings = {
-	  :address => "www.email-smtp.us-west-2.amazonaws.com",
+	  :address => "email-smtp.us-west-2.amazonaws.com",
 	  :port => 587,
-	  :user_name => ENV["SES_SMTP_USERNAME"], #Your SMTP user
+	  :user_name => ENV["SES_SMTP_USERNAME"], # Your SMTP user
 	  :password => ENV["SES_SMTP_PASSWORD"], #Your SMTP password
 	  :authentication => :login,
 	  :enable_starttls_auto => true
