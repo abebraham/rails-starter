@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
 		@email = user.email
 		@name = user.name
 		subject = "Thanks for Joining RailsStarter"
-		from = "hello@railsstarter.com"
+		from = "welcome@getotato.com"
     mail(to: @email, subject: subject, from: from)
 	end
 end

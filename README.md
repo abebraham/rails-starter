@@ -102,7 +102,7 @@ Description: This is a simple Rails starter application for prototyping with the
 
 ## Email | AWS SES
 
-### Credentials
+### Setup
 * Adding Email Address following this [guide](https://www.sitepoint.com/deliver-the-mail-with-amazon-ses-and-rails/)
 
 * Next create your SMTP Credentials
@@ -120,7 +120,21 @@ Description: This is a simple Rails starter application for prototyping with the
 
 * When ready you will have to get out of the AWS SES Sandbox
 
+* Change the _from_ email in the `user_mailer.rb`
+``` ruby
+def user_welcome(user)
+    @email = user.email
+    @name = user.name
+    subject = "Thanks for Joining RailsStarter"
+    from = "j.abraham.gomez@gmail.com"
+    mail(to: @email, subject: subject, from: from)
+end
+```
+
 * Run `git add .` then `git commit -m ""` then `eb deploy`
+
+### Setting up NameCheap DKIM
+* Follow this [instructions](https://blog.lunchbunch.me/aws-ses-domain-verification)
 
 ### Edit Email Views
 * For most Devise related Email Views edit in `appview/devise/mailer*`
