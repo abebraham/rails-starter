@@ -126,7 +126,7 @@ def user_welcome(user)
     @email = user.email
     @name = user.name
     subject = "Thanks for Joining RailsStarter"
-    from = "j.abraham.gomez@gmail.com"
+    from = "email@example.com"
     mail(to: @email, subject: subject, from: from)
 end
 ```
