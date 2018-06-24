@@ -1,6 +1,6 @@
 Rails.application.configure do
 	# EMAIL CONFIGURATIONS
-	config.x.mail_from = %(Your site name <no-reply@rails-starter-staging.us-west-2.elasticbeanstalk.com>)
+	# config.x.mail_from = %(Your site name <no-reply@rails-starter-staging.us-west-2.elasticbeanstalk.com>)
   config.action_mailer.perform_deliveries = true
 	config.action_mailer.raise_delivery_errors = true
   host = 'rails-starter-staging.us-west-2.elasticbeanstalk.com'
