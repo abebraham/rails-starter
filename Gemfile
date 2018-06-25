@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',                   '5.0.5'
 gem 'bcrypt',                  '3.1.11'
 gem 'faker',                   '1.7.3'
-gem 'will_paginate',           '3.1.6'
+# gem 'will_paginate',           '3.1.6'
 gem 'sass-rails',              '5.0.6'
 gem 'uglifier',                '3.2.0'
 gem 'coffee-rails',            '4.2.2'
@@ -15,6 +15,10 @@ gem 'webpacker',               '~> 3.2'
 gem 'clipboard-rails',         '1.7.1'
 gem "jquery-slick-rails",      '1.9.0'
 gem 'devise',                  '4.4.3'
+gem 'activeadmin',             '1.3.0'
+gem 'kaminari'
+
+# gem ahoy
 # gem 'stripe'
 
 group :development, :test do

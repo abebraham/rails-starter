@@ -157,3 +157,14 @@ end
 #### Edit Email Views
 * For most Devise related Email Views edit in `appview/devise/mailer*`
 * For successful Registration email view `registrations_controller.rb`
+
+## Active Admin
+#### Getting Started
+* Run `rails g active_admin:install`
+
+* Run `rails db:migrate`
+
+* Run `rails db:seed`
+
+* Solution if Active:admin error [Look her](https://github.com/activeadmin/activeadmin/blob/d9582f33f3c76bac04373f21c25b4efd2be90e65/docs/0-installation.md#will_paginate)
+
