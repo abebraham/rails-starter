@@ -133,6 +133,10 @@ end
 
 * Run `git add .` then `git commit -m ""` then `eb deploy`
 
+### Create Email Redirect
+* Create a SNS Topic
+* [Instructions for Lambda](https://medium.com/@ashan.fernando/forwarding-emails-to-your-inbox-using-amazon-ses-2d261d60e417)
+
 ### Setting up NameCheap DKIM
 * Follow this [instructions](https://blog.lunchbunch.me/aws-ses-domain-verification)
 
