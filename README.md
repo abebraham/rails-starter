@@ -57,6 +57,20 @@ Description: This is a simple Rails starter application for prototyping with the
 * Go into AWS Console and create postgreSQL db within Elastic Beanstalk. Do _not_ use username: Admin!
     - Go into your environment > configurations > database 
 
+#### Set up environment variables
+* Some of these are already ready preconfigured
+```
+BUNDLE_WITHOUT = <test:development>
+DEVISE_SECRET_KEY = <Long string>
+RACK_ENV = production
+RAILS_SERVE_STATIC_FILES = true
+RAILS_SKIP_ASSET_COMPILATION = false
+RAILS_SKIP_MIGRATIONS = false
+SECRET_KEY_BASE = <long string | view command below>
+SES_SMTP_PASSWORD = < unique Password >
+SES_SMTP_USERNAME = < unique Username >
+```
+
 * run `eb setenv SECRET_KEY_BASE=$(rails secret)`
 
 * run `RAILS_ENV=production bundle exec rake assets:precompile`
@@ -65,7 +79,7 @@ Description: This is a simple Rails starter application for prototyping with the
 
 * run `eb deploy`
 
-### Useful EB commands
+#### Useful EB commands
 
 * Run `eb printenv` to view environment variables
 
@@ -73,7 +87,7 @@ Description: This is a simple Rails starter application for prototyping with the
 
 ## Devise
 
-### Getting Started
+#### Getting Started
 
 * Run `Bundle update && bundle install`
 
@@ -90,7 +104,7 @@ Description: This is a simple Rails starter application for prototyping with the
 
 * Run `rails db:migrate`
 
-### Working with Devise
+#### Working with Devise
 
 * Add new attribute to (User) model
 	* Run `rails g migration addNameToUsers name:string`
@@ -102,7 +116,7 @@ Description: This is a simple Rails starter application for prototyping with the
 
 ## Email | AWS SES
 
-### Setup
+#### Setup
 * Adding Email Address following this [guide](https://www.sitepoint.com/deliver-the-mail-with-amazon-ses-and-rails/)
 
 * Next create your SMTP Credentials
@@ -133,13 +147,13 @@ end
 
 * Run `git add .` then `git commit -m ""` then `eb deploy`
 
-### Create Email Redirect
+#### Create Email Redirect
 * Create a SNS Topic
 * [Instructions for Lambda](https://medium.com/@ashan.fernando/forwarding-emails-to-your-inbox-using-amazon-ses-2d261d60e417)
 
-### Setting up NameCheap DKIM
+#### Setting up NameCheap DKIM
 * Follow this [instructions](https://blog.lunchbunch.me/aws-ses-domain-verification)
 
-### Edit Email Views
+#### Edit Email Views
 * For most Devise related Email Views edit in `appview/devise/mailer*`
 * For successful Registration email view `registrations_controller.rb`
