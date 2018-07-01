@@ -16,9 +16,10 @@ gem 'clipboard-rails',         '1.7.1'
 gem "jquery-slick-rails",      '1.9.0'
 gem 'devise',                  '4.4.3'
 gem 'activeadmin',             '1.3.0'
-gem 'kaminari'
+gem 'kaminari',                '1.1.1'
+gem 'ahoy_matey',              '2.1.0'
+gem 'blazer',                  '1.9.0'
 
-# gem ahoy
 # gem 'stripe'
 
 group :development, :test do

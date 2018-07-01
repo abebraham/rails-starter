@@ -11,7 +11,11 @@ Description: This is a simple Rails starter application for prototyping with the
     * Carousel: [Slick.JS](http://kenwheeler.github.io/slick/)
     * Clipboard: [Clipboard.JS](https://clipboardjs.com/)
     * Checkbox/Radio: [Pretty Checkbox](https://lokesh-coder.github.io/pretty-checkbox/) 
-* Analytics: 
+* Analytics:
+    * [Ahoy](https://github.com/ankane/ahoy.js)
+    * [Blazer](https://github.com/ankane/blazer)
+    * [Groupdate](https://github.com/ankane/groupdate)
+    * [Chartkick](https://www.chartkick.com/)
 * Email: AWS SES
 
 ## Getting Started
@@ -167,4 +171,13 @@ end
 * Run `rails db:seed`
 
 * Solution if Active:admin error [Look her](https://github.com/activeadmin/activeadmin/blob/d9582f33f3c76bac04373f21c25b4efd2be90e65/docs/0-installation.md#will_paginate)
+
+## Ahoy
+
+## Blazer
+* ENV["BLAZER_DATABASE_URL"] = "postgres://user:password@hostname:5432/database"
+
+
+* Contains many query examples to use: https://blazer.dokkuapp.com/queries/15-map
+
 

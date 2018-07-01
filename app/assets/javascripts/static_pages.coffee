@@ -6,6 +6,11 @@ ready = ->
 	if $('body').attr('data-loaded') == 'T'
     return
   # My code
+
+	document.querySelector('.cta').addEventListener 'click', (e) ->
+		ahoy.track("Clicked the Navigation CTA", {language: "JavaScript", meta_data: "hello"})
+		return
+
   # meta_tag = document.querySelector("meta[name='action']").content
   # if meta_tag == "welcome"
   	# initSlick()
