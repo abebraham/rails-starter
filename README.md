@@ -19,24 +19,32 @@ Description: This is a simple Rails starter application for prototyping with the
 * Email: AWS SES
 
 ## Setting up EB Environment
-1. Start new EB Project
-2. Add Source Code Zip
-3. Press Configure More Options
-    1. Database: Add Postgres DB, dbuser, and password
-    2. Modify Software: Add ENV Variables
-        - RAILS_SERVE_STATIC_FILES (set as true)
-        - ADMIN_EMAIL
-        - ADMIN_PASS
-        - DEVISE_SECRET_KEY (run `rails secret`)
-        - SECRET_KEY_BASE (run `rails secret`)
-        - SES_SMTP_PASSWORD
-        - SES_SMTP_USERNAME
-        - FACEBOOK_APP_ID
-        - FACEBOOK_SECRET_KEY
-        - TWITTER_APP_ID
-        - TWITTER_SECRET_KEY
-4. Press on 'Create app'
-5. 
+
+- Create new EB Application
+    - Go to your Rails-starter repo in your machine
+    - run `eb init -i`
+    - Select Yes to adding CodeCommit Repo
+    - select option `3) Ruby 2.4 (Puma)`
+- Create a new Enviornment
+    - Select Application Code with Exisiting Version, select previously created source code (code commit)
+    - Select _Configure more options_ at the bottom
+        - Select _Modify_ in the Software section and add the following envrionment variabls
+            - RAILS_SERVE_STATIC_FILES (set as true)
+            - ADMIN_EMAIL
+            - ADMIN_PASS
+            - DEVISE_SECRET_KEY (run `rails secret`)
+            - SECRET_KEY_BASE (run `rails secret`)
+            - SES_SMTP_PASSWORD
+            - SES_SMTP_USERNAME
+            - FACEBOOK_APP_ID
+            - FACEBOOK_SECRET_KEY
+            - TWITTER_APP_ID
+            - TWITTER_SECRET_KEY
+        - Select _Modify_ Databse to create Postgres DB
+            - select Engine Version: 9.6.6
+            - create username and password (Abrahamloves+dbadmin)
+        - Select _Create environment_ at the bottom
+
 
 
 
