@@ -20,6 +20,8 @@ gem 'kaminari',                '1.1.1'
 gem 'ahoy_matey',              '2.1.0'
 gem 'blazer',                  '1.9.0'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'figaro',                  '1.1.1'
 # gem 'stripe'
 
 group :development, :test do
