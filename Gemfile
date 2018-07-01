@@ -19,7 +19,7 @@ gem 'activeadmin',             '1.3.0'
 gem 'kaminari',                '1.1.1'
 gem 'ahoy_matey',              '2.1.0'
 gem 'blazer',                  '1.9.0'
-
+gem 'omniauth-facebook'
 # gem 'stripe'
 
 group :development, :test do
