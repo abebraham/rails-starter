@@ -262,6 +262,10 @@ Devise.setup do |config|
                              ENV["FACEBOOK_SECRET_KEY"], 
                              token_params: { parse: :json }
 
+  config.omniauth :twitter, ENV["TWITTER_APP_ID"], 
+                            ENV["TWITTER_SECRET_KEY"], 
+                            token_params: { parse: :json }
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

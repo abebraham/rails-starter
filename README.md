@@ -185,3 +185,8 @@ end
 * Create an application using https://developer.facebook.com
 
 * Change the enviornment variables for Facebook API ID and Facebook Secret Key
+
+### Twitter
+* Do the tame as for facebook
+
+* For development you _must_ use 127.0.0.1 instead of localhost
