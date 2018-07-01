@@ -173,11 +173,15 @@ end
 * Solution if Active:admin error [Look her](https://github.com/activeadmin/activeadmin/blob/d9582f33f3c76bac04373f21c25b4efd2be90e65/docs/0-installation.md#will_paginate)
 
 ## Ahoy
+* Details for Ahoy
 
 ## Blazer
 * ENV["BLAZER_DATABASE_URL"] = "postgres://user:password@hostname:5432/database"
 
-
 * Contains many query examples to use: https://blazer.dokkuapp.com/queries/15-map
 
+## Omniauth
+### Facebook
+* Create an application using https://developer.facebook.com
 
+* Change the enviornment variables for Facebook API ID and Facebook Secret Key
