@@ -18,7 +18,29 @@ Description: This is a simple Rails starter application for prototyping with the
     * [Chartkick](https://www.chartkick.com/)
 * Email: AWS SES
 
-## Getting Started
+## Setting up EB Environment
+1. Start new EB Project
+2. Add Source Code Zip
+3. Press Configure More Options
+    1. Database: Add Postgres DB, dbuser, and password
+    2. Modify Software: Add ENV Variables
+        - RAILS_SERVE_STATIC_FILES (set as true)
+        - ADMIN_EMAIL
+        - ADMIN_PASS
+        - DEVISE_SECRET_KEY (run `rails secret`)
+        - SECRET_KEY_BASE (run `rails secret`)
+        - SES_SMTP_PASSWORD
+        - SES_SMTP_USERNAME
+        - FACEBOOK_APP_ID
+        - FACEBOOK_SECRET_KEY
+        - TWITTER_APP_ID
+        - TWITTER_SECRET_KEY
+4. Press on 'Create app'
+5. 
+
+
+
+## Cloning Repo
 
 * Clone the repo using the following command run `git clone <directory url> <directory name>`
 
@@ -190,3 +212,4 @@ end
 * Do the tame as for facebook
 
 * For development you _must_ use 127.0.0.1 instead of localhost
+
